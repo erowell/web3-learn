@@ -86,51 +86,30 @@ https://www.youtube.com/watch?v=99pYGpTWcXM
 
 **Ethereum Virtual Machine (EVM)** - A level of abstraction between smart contract executable code and the executing machine. It exists as one single entity maintained by thousands of connected computers running an Ethereum client. An EVM can execute smart contracts written in Solidity. All EVMs must adhere to the Ethereum yellow pages specs.
 
-**Migrations** - Series of steps, deploys contracts to the blockchain
+**Migrations** - Series of steps, deploys contracts to the blockchain. Similar to flyway or liquibase for DB migrations, except for smart contracts.
 
 **Web3 Foundation** - Funds R&D teams building the foundation of the decentralized web.
 
-**Polkadot** - Will enable a completely decentralized web where users are in control. Funded by Web3 Foundation, lead by Ethereum founder.
-
-**React** (TODO: Add to a separate project specifically for learning react) - Web application framework. Component based UI building. Extended by libraries. Similar to Angular in concept. The core library builds UI, then various libs add additional functionality. A React stack example:
-
-NextJS for project bootstrap
-    https://github.com/vercel/next.js
-GatsbyJS another bootstrapping option. Good for quickly building react sites (static especially)
-    https://github.com/gatsbyjs/gatsby
-Redux for state management
-    https://github.com/reduxjs/react-redux
-SASS/SCSS with React Bootstrap for styling
-    https://github.com/sass/node-sass
-    https://github.com/react-bootstrap/react-bootstrap
-React-router for navigation
-    https://github.com/ReactTraining/react-router
-Formik or React Hook Form for forms
-    https://github.com/formium/formik
-    https://github.com/react-hook-form/react-hook-form
-Animations
-    https://github.com/airbnb/lottie-web
-React Typescript Reference
-    https://github.com/typescript-cheatsheets/react
+**Polkadot** - Company funded by Web3 Foundation and lead by Ethereum founder. Aims to enable a completely decentralized web where users are in control.
 
 ## Sources
 
-https://decrypt.co/resources/what-is-web-3
-https://www.investopedia.com/terms/b/blockchain.asp
-https://web3js.readthedocs.io/en/v1.3.4/
-https://web3.foundation/
-https://polkadot.network/about/
-https://www.youtube.com/watch?v=99pYGpTWcXM (DApp tutorial)
-https://corporatefinanceinstitute.com/resources/knowledge/deals/smart-contracts/
-https://www.trufflesuite.com/
-https://www.trufflesuite.com/ganache
-https://docs.soliditylang.org/en/v0.7.4/
-https://www.investopedia.com/terms/e/ethereum.asp
-https://www.investopedia.com/terms/p/proof-work.asp
-https://www.investopedia.com/terms/p/proof-stake-pos.asp
-https://www.bitdegree.org/crypto/tutorials/proof-of-work-vs-proof-of-stake
-https://en.wikipedia.org/wiki/Proof_of_work
-https://en.wikipedia.org/wiki/Proof_of_stake
-https://ethereum.org/en/developers/docs/intro-to-ethereum/
-https://ethereum.org/en/developers/docs/evm/
-https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e
+https://decrypt.co/resources/what-is-web-3  
+https://www.investopedia.com/terms/b/blockchain.asp  
+https://web3js.readthedocs.io/en/v1.3.4/  
+https://web3.foundation/  
+https://polkadot.network/about/  
+https://www.youtube.com/watch?v=99pYGpTWcXM (DApp blockchain tutorial)  
+https://corporatefinanceinstitute.com/resources/knowledge/deals/smart-contracts/  
+https://www.trufflesuite.com/  
+https://www.trufflesuite.com/ganache  
+https://docs.soliditylang.org/en/v0.7.4/  
+https://www.investopedia.com/terms/e/ethereum.asp  
+https://www.investopedia.com/terms/p/proof-work.asp  
+https://www.investopedia.com/terms/p/proof-stake-pos.asp  
+https://www.bitdegree.org/crypto/tutorials/proof-of-work-vs-proof-of-stake  
+https://en.wikipedia.org/wiki/Proof_of_work  
+https://en.wikipedia.org/wiki/Proof_of_stake  
+https://ethereum.org/en/developers/docs/intro-to-ethereum/  
+https://ethereum.org/en/developers/docs/evm/  
+https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e  
