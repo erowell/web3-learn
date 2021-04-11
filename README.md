@@ -110,6 +110,9 @@ https://www.investopedia.com/terms/p/proof-stake-pos.asp
 https://www.bitdegree.org/crypto/tutorials/proof-of-work-vs-proof-of-stake  
 https://en.wikipedia.org/wiki/Proof_of_work  
 https://en.wikipedia.org/wiki/Proof_of_stake  
+https://ethereum.org/en/
 https://ethereum.org/en/developers/docs/intro-to-ethereum/  
 https://ethereum.org/en/developers/docs/evm/  
+https://ethereum.org/en/developers/docs/smart-contracts/  
 https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e  
+https://eips.ethereum.org/EIPS/eip-20  
