@@ -61,7 +61,7 @@ truffle migrate --reset
 
 ## Enabling Token Transactions on the EthSwap Contract
 
-TODO
+1. First write tests to verify behavior.
 
 ## Credits
 
@@ -70,4 +70,6 @@ https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ
 
 ## Sources
 
-https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations
+https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations  
+https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#towei  
+https://ethereum.stackexchange.com/questions/253/  
