@@ -39,9 +39,35 @@ https://www.youtube.com/watch?v=99pYGpTWcXM
     npm install --save identicon.js@^2.3.3
     ```
 
-7. Build and deploy a custom ERC-20 token: TODO
+## Run the Truffle Migrations
+
+Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time. As your project evolves, you'll create new migration scripts to further this evolution on the blockchain. A history of previously run migrations is recorded on-chain through a special Migrations contract, detailed below.
+
+Run the command:
+```
+truffle migrate
+```
+
+Add the ```--reset``` flag to run from the beginning:
+```
+truffle migrate --reset
+```
+
+## Migration Details
+
+**1_initial_migration.js**  - Deploy a smart contract named 'Migrations' that holds an owner address and the last completed migration number.
+
+**2_deploy_contracts.js** - Deploy a Token contract and an EthSwap contract (represents the exchange). Transfer the entire balance from the Token contract to the EthSwap contract. The exchange now has the entire balance.
+
+## Enabling Token Transactions on the EthSwap Contract
+
+TODO
 
 ## Credits
 
 https://github.com/dappuniversity/eth_swap  
 https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ
+
+## Sources
+
+https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations
