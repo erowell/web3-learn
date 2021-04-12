@@ -92,17 +92,23 @@ Deploy a Token contract and an EthSwap contract (represents the exchange). Trans
 2. Then load the URL in the browser:  
     http://localhost:3000/
 
-3. Connect the browser to the local Ganache blockchain through the Metamask extension. Click the 'Networks' dropdown in the top-middle and select **Custom RPC** to add the Ganache network. See Ganache settings for URL and Chain ID values.
+3. Connect the browser to the local Ganache blockchain through the Metamask extension.
+
+    First in Metamask, import the private key of the **first** account in the Ganache accounts list (To find the accounts private key, click the 'Key' button on the right in Ganache)
+
+    Click the 'Networks' dropdown in the top-middle and select **Custom RPC** to add the Ganache network. See Ganache settings for URL and Chain ID values.
     * Network Name: Ganache
     * New RPC URL: http://localhost:7545
     * Chain ID: 1337
+
+    Now click connect and verify it shows as 'Connected' in the upper-left.
 
 4. Connect the app to the local Ganache blockchain.
 
     In the App.js React component, the web3.js library is used to connect to the blockchain, load the Token and EthSwap smart contracts (using the ABI artifacts), and buy/sell Tokens with ETH.
 
     The web3.js library connects to the blockchain through Metamask.
-    When a buy or sell request is made, it opens a confirmation screen in Metamask with the transaction details. 
+    When a buy or sell request is made, it opens a confirmation screen in Metamask with the transaction details. The web3.js methods provide callbacks so the React app knows when the transaction is approved or rejected.
 
 ## Credits
 
