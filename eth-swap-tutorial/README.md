@@ -1,6 +1,6 @@
 # eth-swap-tutorial
 
-A tutorial from DApp University for setting up a cryptocurrency exchange.
+A tutorial from DApp University for setting up a custom ERC-20 token and a cryptocurrency exchange.
 
 ## DApp Univesity blockchain tutorial video
 
@@ -19,7 +19,9 @@ https://www.youtube.com/watch?v=99pYGpTWcXM
 
 3. Install Ganache (Truffle Suite, one-click blockchain that runs locally)
 
-    Download, install, and run: https://www.trufflesuite.com/ganache
+    a) Download, install, and run the quickstart: https://www.trufflesuite.com/ganache  
+    b) Click the 'Settings' Gear -> 'Server' tab, and set the Network ID to: ```1337``` (see bug linked in the sources)
+    c) Restart the blockchain
 
 4. Install Truffle framework (Smart contract dev framework to create Ethereum contracts with the Solidity language. It can also write tests against the contracts, and deploy them to the blockchain)
 
@@ -39,6 +41,10 @@ https://www.youtube.com/watch?v=99pYGpTWcXM
     npm install --save identicon.js@^2.3.3
     ```
 
+7. Set up Metamask digital wallet. Metamask is used to connect to the browser to the blockchain (either the local Ganache network and the main Ethereum network), store, and transfer ETH and ERC-20 tokens. Download and install the chrome extension.
+
+    https://metamask.io/
+
 ## Run the Truffle Migrations
 
 Migrations are JavaScript files that help you deploy contracts to the Ethereum network. These files are responsible for staging your deployment tasks, and they're written under the assumption that your deployment needs will change over time. As your project evolves, you'll create new migration scripts to further this evolution on the blockchain. A history of previously run migrations is recorded on-chain through a special Migrations contract, detailed below.
@@ -55,9 +61,11 @@ truffle migrate --reset
 
 ## Migration Details
 
-**1_initial_migration.js**  - Deploy a smart contract named 'Migrations' that holds an owner address and the last completed migration number.
+```1_initial_migration.js```  
+Deploy a smart contract named 'Migrations' that holds an owner address and the last completed migration number.
 
-**2_deploy_contracts.js** - Deploy a Token contract and an EthSwap contract (represents the exchange). Transfer the entire balance from the Token contract to the EthSwap contract. The exchange now has the entire balance.
+```2_deploy_contracts.js```  
+Deploy a Token contract and an EthSwap contract (represents the exchange). Transfer the entire balance from the Token contract to the EthSwap contract. The exchange now has the entire balance.
 
 ## EthSwap Contract Implementation
 
@@ -75,13 +83,35 @@ truffle migrate --reset
 
 4. Run ```truffle migrate --reset``` to build and deploy contracts to the blockchain
 
+## Connect the browser and React app to the blockchain
+
+1. Serve the React app locally on port 3000 by running:
+
+        npm run start
+
+2. Then load the URL in the browser:  
+    http://localhost:3000/
+
+3. Connect the browser to the local Ganache blockchain through the Metamask extension. Click the 'Networks' dropdown in the top-middle and select **Custom RPC** to add the Ganache network. See Ganache settings for URL and Chain ID values.
+    * Network Name: Ganache
+    * New RPC URL: http://localhost:7545
+    * Chain ID: 1337
+
+4. Connect the app to the local Ganache blockchain.
+
+    In the App.js React component, the web3.js library is used to connect to the blockchain, load the Token and EthSwap smart contracts (using the ABI artifacts), and buy/sell Tokens with ETH.
+
+    The web3.js library connects to the blockchain through Metamask.
+    When a buy or sell request is made, it opens a confirmation screen in Metamask with the transaction details. 
+
 ## Credits
 
 https://github.com/dappuniversity/eth_swap  
-https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ
+https://www.youtube.com/channel/UCY0xL8V6NzzFcwzHCgB8orQ  
 
 ## Sources
 
 https://www.trufflesuite.com/docs/truffle/getting-started/running-migrations  
 https://web3js.readthedocs.io/en/v1.2.11/web3-utils.html#towei  
 https://ethereum.stackexchange.com/questions/253/  
+https://github.com/trufflesuite/ganache-core/issues/575 (Ganache network/chain ID mismatch bug)  
