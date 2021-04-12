@@ -49,7 +49,7 @@ A repository for web3 projects with the goal of understanding blockchain technol
 
 **Migrations** - Series of steps, deploys contracts to the blockchain. Similar to flyway or liquibase for DB migrations, except for smart contracts.
 
-**Contract ABI Specification** - The Contract Application Binary Interface (ABI) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in this specification. The encoding is not self describing and thus requires a schema in order to decode.
+**Contract ABI Specification** - The Contract Application Binary Interface (ABI) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in this specification. The encoding is not self describing and thus requires a schema in order to decode. ABIs are artifacts from deploying to the blockchain.
 
 **Web3 Foundation** - Funds R&D teams building the foundation of the decentralized web.
 

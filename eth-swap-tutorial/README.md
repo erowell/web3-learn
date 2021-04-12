@@ -59,9 +59,21 @@ truffle migrate --reset
 
 **2_deploy_contracts.js** - Deploy a Token contract and an EthSwap contract (represents the exchange). Transfer the entire balance from the Token contract to the EthSwap contract. The exchange now has the entire balance.
 
-## Enabling Token Transactions on the EthSwap Contract
+## EthSwap Contract Implementation
 
 1. First write tests to verify behavior.
+    * Token contract is deployed
+    * EthSwap contract is deployed
+    * EthSwap contract has tokens
+    * EthSwap allows buying and selling Tokens for ETH with balance validations
+
+2. Implement the EthSwap ```buyTokens()``` and ```sellTokens()``` methods.
+    * Buying: Sender transfers ETH to the EthSwap and receives Tokens
+    * Selling: Sender transfers Tokens to the EthSwap and receives ETH
+
+3. Run ```truffle test``` to verify tests pass
+
+4. Run ```truffle migrate --reset``` to build and deploy contracts to the blockchain
 
 ## Credits
 
