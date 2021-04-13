@@ -8,17 +8,52 @@ import './App.css'
 
 class App extends Component {
 
+    constructor(props) {
+        super(props)
+
+        // TODO: Re-implement state with redux?
+        // This holds the state of data and is used with the React setState(...) method
+        this.state = {
+            account: '',
+            token: {},
+            ethSwap: {},
+            ethBalance: '0',
+            tokenBalance: '0',
+            loading: true
+        }
+    }
+
+    // Lifecycle method for the React component. It's called before render.
     async componentWillMount() {
-        console.log("componentWillMount")
         await this.loadWeb3()
         await this.loadBlockchainData()
     }
 
+    // Boilerplate code to load in the web3.js library
+    async loadWeb3() {
+        if (window.ethereum) {
+            window.web3 = new Web3(window.ethereum)
+            await window.ethereum.enable()
+        }
+        else if (window.web3) {
+            window.web3 = new Web3(window.web3.currentProvider)
+        }
+        else {
+            window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
+        }
+    }
+
+    // 
     async loadBlockchainData() {
         const web3 = window.web3
 
+        // Fetch Ethereum accounts connected to the blockchain on Metamask
         const accounts = await web3.eth.getAccounts()
+
+        // React method for updating state
         this.setState({ account: accounts[0] })
+
+        // TODO: Validate one account is founded, error if none are found
 
         const ethBalance = await web3.eth.getBalance(this.state.account)
         this.setState({ ethBalance })
@@ -26,6 +61,9 @@ class App extends Component {
         // Load Token
         const networkId = await web3.eth.net.getId()
         const tokenData = Token.networks[networkId]
+
+        console.log('networkId: ' + networkId)
+
         if (tokenData) {
             const token = new web3.eth.Contract(Token.abi, tokenData.address)
             this.setState({ token })
@@ -47,45 +85,31 @@ class App extends Component {
         this.setState({ loading: false })
     }
 
-    async loadWeb3() {
-        if (window.ethereum) {
-            window.web3 = new Web3(window.ethereum)
-            await window.ethereum.enable()
-        }
-        else if (window.web3) {
-            window.web3 = new Web3(window.web3.currentProvider)
-        }
-        else {
-            window.alert('Non-Ethereum browser detected. You should consider trying MetaMask!')
-        }
-    }
-
     buyTokens = (etherAmount) => {
         this.setState({ loading: true })
-        this.state.ethSwap.methods.buyTokens().send({ value: etherAmount, from: this.state.account }).on('transactionHash', (hash) => {
-            this.setState({ loading: false })
-        })
+
+        const buyData = {
+            value: etherAmount,
+            from: this.state.account
+        }
+
+        // TODO: Handle the scenario where user rejects the transaction from metamask
+        this.state.ethSwap.methods.buyTokens()
+            .send(buyData)
+            .on('transactionHash', (hash) => {
+                this.setState({ loading: false })
+            })
     }
 
     sellTokens = (tokenAmount) => {
         this.setState({ loading: true })
+
+        // TODO: Same here, handle the scenario where user rejects the transaction from metamask
         this.state.token.methods.approve(this.state.ethSwap.address, tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
             this.state.ethSwap.methods.sellTokens(tokenAmount).send({ from: this.state.account }).on('transactionHash', (hash) => {
                 this.setState({ loading: false })
             })
         })
-    }
-
-    constructor(props) {
-        super(props)
-        this.state = {
-            account: '',
-            token: {},
-            ethSwap: {},
-            ethBalance: '0',
-            tokenBalance: '0',
-            loading: true
-        }
     }
 
     render() {
@@ -108,11 +132,9 @@ class App extends Component {
                     <div className="row">
                         <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '600px' }}>
                             <div className="content mr-auto ml-auto">
-                                <a
-                                    href="http://www.dappuniversity.com/bootcamp"
+                                <a href="http://www.dappuniversity.com/bootcamp"
                                     target="_blank"
-                                    rel="noopener noreferrer"
-                                >
+                                    rel="noopener noreferrer">
                                 </a>
 
                                 {content}

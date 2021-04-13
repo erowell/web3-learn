@@ -17,7 +17,7 @@ module.exports = {
         enabled: true,
         runs: 200
       },
-      evmVersion: "petersburg"
+      evmVersion: "petersburg" // https://github.com/ethereum/solidity/issues/6086   ???
     }
   }
 }
