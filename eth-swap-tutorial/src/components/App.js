@@ -88,10 +88,17 @@ class App extends Component {
     buyTokens = (etherAmount) => {
         this.setState({ loading: true })
 
+        const buyData = {
+            value: etherAmount,
+            from: this.state.account
+        }
+
         // TODO: Handle the scenario where user rejects the transaction from metamask
-        this.state.ethSwap.methods.buyTokens().send({ value: etherAmount, from: this.state.account }).on('transactionHash', (hash) => {
-            this.setState({ loading: false })
-        })
+        this.state.ethSwap.methods.buyTokens()
+            .send(buyData)
+            .on('transactionHash', (hash) => {
+                this.setState({ loading: false })
+            })
     }
 
     sellTokens = (tokenAmount) => {

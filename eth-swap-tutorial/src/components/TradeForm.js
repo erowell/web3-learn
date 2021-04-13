@@ -20,7 +20,7 @@ class TradeForm extends Component {
     }
 
     isBuyState = () => {
-        return this.props.currentForm == 'buy'
+        return this.props.currentForm === 'buy'
     }
 
     getInputBalance = () => {
@@ -40,13 +40,12 @@ class TradeForm extends Component {
     }
 
     swap = () => {
-        let etherAmount
-        etherAmount = this.state.input.toString()
-        etherAmount = window.web3.utils.toWei(etherAmount, 'Ether')
+        let amount = this.state.input.toString()
+        amount = window.web3.utils.toWei(amount, 'Ether')
         if (this.isBuyState()) {
-            this.props.buyTokens(etherAmount)
+            this.props.buyTokens(amount)
         } else {
-            this.props.sellTokens(etherAmount)
+            this.props.sellTokens(amount)
         }
     }
 

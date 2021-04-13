@@ -17,7 +17,7 @@ class Main extends Component {
                     <button
                         className="btn btn-light"
                         onClick={(event) => {
-                            if (this.state.currentForm != 'buy') {
+                            if (this.state.currentForm !== 'buy') {
                                 this.setState({ currentForm: 'buy', resetFormToggle: !this.state.resetFormToggle })
                             }
                         }} >
@@ -27,7 +27,7 @@ class Main extends Component {
                     <button
                         className="btn btn-light"
                         onClick={(event) => {
-                            if (this.state.currentForm == 'buy') {
+                            if (this.state.currentForm === 'buy') {
                                 this.setState({ currentForm: 'sell', resetFormToggle: !this.state.resetFormToggle })
                             }
                         }}>
@@ -41,7 +41,8 @@ class Main extends Component {
                             currentForm={this.state.currentForm}
                             ethBalance={this.props.ethBalance}
                             tokenBalance={this.props.tokenBalance}
-                            buyTokens={this.props.buyTokens} />
+                            buyTokens={this.props.buyTokens}
+                            sellTokens={this.props.sellTokens} />
                     </div>
                 </div>
             </div>
