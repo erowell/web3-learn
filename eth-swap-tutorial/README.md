@@ -6,6 +6,10 @@ A tutorial from DApp University for setting up a custom ERC-20 token and a crypt
 
 https://www.youtube.com/watch?v=99pYGpTWcXM
 
+## App Architecture
+
+![architecture](basic-architecture.png)
+
 ## Setup (macOS)
 
 1. Install Xcode, launch, and accept the T&C

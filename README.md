@@ -31,11 +31,11 @@ A repository for web3 projects with the goal of understanding blockchain technol
 
 **Decentralized Finance (DeFi)** - Enables lending and borrowing, tokenizing real-world assets and art. Make predictions, invest, and trade cypto assets.
 
-**Proof-of-Stake (PoS)** - A consensus mechanism to confirm transactions and mine new tokens on a blockchain. The block chain reaches consensus by expending effort solving an arbitrary mathematical puzzle.
+**Proof-of-Work (PoW)** - A consensus mechanism to confirm transactions and mine new tokens on a blockchain. The block chain reaches consensus by expending effort solving an arbitrary mathematical puzzle.
     - Uses significant amounts of electricity.
     - Very limited in the number of transactions it can process at the same time.
 
-**Proof-of-Work (PoW)** - Alternative to PoW. Also a consensus mechanism to confirm transactions and mine new tokens on a blockchain. The creator of the next block is chosen via various combinations of random selection and wealth or age (i.e., the stake).
+ **Proof-of-Stake (PoS)** - Alternative to PoW. Also a consensus mechanism to confirm transactions and mine new tokens on a blockchain. The creator of the next block is chosen via various combinations of random selection and wealth or age (i.e., the stake).
     - Uses signifigantly less electricity and allows faster transaction validation.
     - DASH token currently uses PoS. Ethereum is migrating to PoS for its next version.
 
@@ -52,8 +52,6 @@ A repository for web3 projects with the goal of understanding blockchain technol
 **Contract ABI Specification** - The Contract Application Binary Interface (ABI) is the standard way to interact with contracts in the Ethereum ecosystem, both from outside the blockchain and for contract-to-contract interaction. Data is encoded according to its type, as described in this specification. The encoding is not self describing and thus requires a schema in order to decode. ABIs are artifacts from deploying to the blockchain.
 
 **Web3 Foundation** - Funds R&D teams building the foundation of the decentralized web.
-
-**Polkadot** - Company funded by Web3 Foundation and lead by Ethereum founder. Aims to enable a completely decentralized web where users are in control.
 
 ## Sources
 
