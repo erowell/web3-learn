@@ -21,6 +21,8 @@ A repository for web3 projects with the goal of understanding blockchain technol
 
 **Smart Contract** - Programs which govern the behaviour of accounts within the Ethereum state. Contracts are deployed to the blockchain. It can be an exchange, a token, a record of exchange, system for secure voting, health records (with private key), inventory management, payment automations, and other bookkeeping/financial services.
 
+**Metamask** - A crypto wallet, installable as a chrome extension
+
 **Exchange** - A platform that allows buying and selling. Can build exchanges through smart contracts.
 
 **Token** - Digital assets that are being built on top of the Ethereum blockchain. Can create new tokens and exchange them through smart contracts.
