@@ -38,10 +38,11 @@ https://www.youtube.com/watch?v=99pYGpTWcXM
 6. Install identicon lib
 
     ```
+    cd eth-swap
     npm install --save identicon.js@^2.3.3
     ```
 
-7. Set up Metamask digital wallet. Metamask is used to connect to the browser to the blockchain (either the local Ganache network and the main Ethereum network), store, and transfer ETH and ERC-20 tokens. Download and install the chrome extension.
+7. Set up Metamask digital wallet. Metamask is used to connect the browser to the blockchain (either the local Ganache network and the main Ethereum network), store, and transfer ETH and ERC-20 tokens. Download and install the chrome extension, then create an account.
 
     https://metamask.io/
 
