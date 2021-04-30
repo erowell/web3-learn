@@ -3,7 +3,7 @@ A repository for web3 projects with the goal of understanding blockchain technol
 
 ## Definitions
 
-**Web3** - A set of protocols led by blockchain that intends to reinvent how the Internet is wired in the backend. It combines the logic of the Internet with the logic of the computer. Money is native to the ecosystem. Web3 is a backend revolution.
+**Web3** - A set of protocols led by blockchain that intends to reinvent how the Internet is wired in the backend. It combines the logic of the Internet with the logic of the computer. Money is native to the ecosystem.
 
 **Blockchain** - A system in which a record of transactions made in bitcoin, ether, or other cryptocurrencies are maintained across several computers that are linked in a peer-to-peer network. A specific type of database that stores data in blocks chained together. A new block is added to the most recent added block maintaining chronological order. A common use case is a ledger for transactions (bitcoin). Decentralized blockchains are immutable. Data entered is irreversable, permanently recorded, and viewable to anyone.
 
